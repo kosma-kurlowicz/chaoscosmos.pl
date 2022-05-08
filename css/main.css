@@ -678,6 +678,10 @@ footer .container {
     justify-content: space-between;
 }
 
+.vertical-card.portfolio-card .portfolio-portrait {
+    height: 70vh;
+}
+
 .vertical-card:nth-child(2n) {
     align-self: flex-end;
 }
@@ -1016,8 +1020,8 @@ footer .container {
   }
 
 @media screen and (min-width:700px) {
-    #portfolio .flex-row {
-        justify-content: center
+    #portfolio .flex-column {
+        justify-content: center;
     }
 
     .vertical-card {
@@ -1026,8 +1030,12 @@ footer .container {
 
     .vertical-card.portfolio-card {
         flex-direction: column;
-        max-width: 360px;
-        margin-right: 2rem;
+        width: 100%;
+        align-self: unset;
+    }
+
+    .vertical-card.portfolio-card .portfolio-portrait {
+        height: 200px;
     }
 
     .vertical-card:nth-child(2n) {
@@ -1036,7 +1044,7 @@ footer .container {
 
     .vertical-card:nth-child(2n).portfolio-card  {
         flex-direction: column;
-        align-self: flex-start;
+        align-self: unset;
     }
 
     .clients-portrait, .portfolio-portrait {
